@@ -1,3 +1,11 @@
+# Overview
+
+This project takes a value from an inout form in the root or parent component. A small bit of logic is applied to this value, in this case it is increased by 2. Then it is passed to the child component where it is again increased by 2 before being displayed by the child.componet.hntl file.
+
+# Demo
+
+Run demo [gh-pages](https://shanegibney.github.io/angular-data-parent-to-child-component/)
+
 # Angulardataparenttochild
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.

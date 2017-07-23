@@ -1,0 +1,15 @@
+<div class="container" style="border: 3px solid #458075; background-color: #6D948C; border-radius: 15px;">
+  <div class="row">
+    <div class="col-xs-4 col-md-4">
+      <h3>child app</h3>
+      <p>
+        value + 4 = newvalue + 2 = quantity = <span *ngIf="quantity">{{quantity}}</span>
+      </p>
+    </div>
+  </div>
+  <div class="col-xs-4 col-md-4">
+    <div>
+      <p *ngFor="let element of data"><strong>name:</strong> {{element.name}} <strong>id:</strong> {{element.id}}</p>
+    </div>
+  </div>
+</div>

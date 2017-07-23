@@ -1,3 +1,35 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container" style="border: 3px solid #515B89; background-color: #79809E; border-radius: 15px;">
+  <div class="row">
+    <div class="col-xs-12 col-md-9">
+      <h1>
+        {{title}}
+      </h1>
+    </div>
+    <div class="col-md-3">
+      <p><a href="https://github.com/shanegibney/angular-data-parent-to-child-component"><button class="btn btn-warning btn-sm">Back to Code</button></a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 col-md-4">
+      <label for="box1">Value:</label>
+      <input type="number" name="box1" class="form-control" [(ngModel)]="value" (ngModelChange)="fun()" />
+      <p>value = {{ value }}</p>
+      <p>newvalue = value + 2 = {{ newvalue }}</p>
+    </div>
+    <div class="col-xs-4 col-md-4">
+      <label for="box2">id:</label>
+      <input type="number" name="box2" class="form-control" [(ngModel)]="id" />
+      <label for="box3">name:</label>
+      <input type="string" name="box3" class="form-control" [(ngModel)]="name" />
+      <p><button (click)="pushto()" class="btn btn-warning btn-sm">Submit</button></p>
+    </div>
+    <div class="col-xs-4 col-md-4">
+      <p *ngFor="let element of details"><strong>name: </strong>{{element.name}} <strong>id: </strong>{{element.id}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8 col-md-8">
+      <app-child [quantity]="newvalue" [data]="details"></app-child>
+    </div>
+  </div>
+</div>
